@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, {{user.username}} your Tiers: {{tiers}} </h1> 
+    <h3>{{user.get_group_permissions}}</h3>
+
+
+    {% if 'auth.view_group' in  user.get_group_permissions %}
+    <h1> Has perm to auth.view_group</h1>
+    {% endif %}
+    <hr>
+
+    {% if 'auth.add_group' in  user.get_group_permissions %}
+    <h1> Has perm to auth.add_group</h1>
+    {% endif %}
+    <hr>
+
+    {% if 'auth.delete_group' in  user.get_group_permissions %}
+    <h1> Has perm to auth.delete_group</h1>
+    {% endif %}
+    <hr>
+
+    {% if 'auth.change_group' in  user.get_group_permissions %}
+    <h1> Has perm to auth.view_group</h1>
+    {% endif %}
+
+
+    
+</body>
+</html>
